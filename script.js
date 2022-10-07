@@ -1,23 +1,36 @@
 "use strict";
 
+const numberOfFilms=+prompt ('Сколько фильмов вы уже посмотрели?','');
 
-let num = 50;
-
-/*while (num<=55) {
-     console.log(num);
-     num++;
-}
-
-do {
-     num++;
-}
-while (num<55);*/
-
-for (let i = 1; i<10; i++) {
-     if (i===6){
-          //break;
-          continue;
-     }
-     console.log(i);
+const personalMovieDB = {
+     count: numberOfFilms,
+     movies: {},
+     actors: {},
+     genres: [],
+     privat: false
+};
      
+for (let i=0; i< 2; i++){
+     const oneQn=prompt('Один из последних просмотренных фильмов', ''),
+           twoQn=prompt('На сколько оцените его', '');
+      if (oneQn!=null && twoQn != null && oneQn!= "" && twoQn != "" && oneQn.length > 5) {
+          personalMovieDB.movies[oneQn]  =twoQn;
+          console.log('done');
+      } else {
+          console.log('error');
+          i--;
+      }
+
+     }
+
+console.log(personalMovieDB);
+
+if (personalMovieDB.count < 10){
+     console.log('You watched so little films');
+} else if (personalMovieDB.count>=10 && personalMovieDB.count<=30) {
+     console.log('You are classical viewer');
+} else if (personalMovieDB.count>30) {
+     console.log('You are cinephile');
+} else {
+     console.log('Error');
 }
