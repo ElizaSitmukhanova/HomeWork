@@ -1,4 +1,4 @@
-"use strict";
+ "use strict";
 
 const numberOfFilms=+prompt ('Сколько фильмов вы уже посмотрели?','');
 
@@ -34,3 +34,13 @@ if (personalMovieDB.count < 10){
 } else {
      console.log('Error');
 }
+ 
+
+
+function showFirstMessage(text) {
+     let a = console.log(text)
+     return a;
+     
+}
+showFirstMessage('Hello world!');
+console.log(a)
