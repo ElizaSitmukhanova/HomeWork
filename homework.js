@@ -1,7 +1,9 @@
- "use strict";
+  "use strict";
 
 const numberOfFilms=+prompt ('Сколько фильмов вы уже посмотрели?','');
+function start() {
 
+}
 const personalMovieDB = {
      count: numberOfFilms,
      movies: {},
@@ -43,4 +45,6 @@ function showFirstMessage(text) {
      
 }
 showFirstMessage('Hello world!');
-console.log(a)
+
+
+ 
